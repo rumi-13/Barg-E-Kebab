@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barg-E-Kebab.</title>
+
+    <!-- Google Material Icons for menu and restaurant -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=menu,restaurant" />
+
+    <!-- Google Fonts for Poppins font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Whisper&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Tailwind CSS CDN for utility-first CSS classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="m-0 p-0">
+    <!-- Navigation Bar -->
+
+    <nav class="fixed z-[100] top-0 left-0 flex flex-col w-screen text-white">
+        <!-- Top Bar with restaurant logo and page name -->
+        <div class=" bg-[#1F4529] bg-opacity-[100%] border-b-2 border-[#ffffff] w-screen p-2 flex justify-between ">
+            <!-- Left side: Logo and Restaurant name -->
+            <div class="flex items-center justify-start w-[90%] md:w-fit">
+                <span class="material-symbols-outlined text-[50px] lg:text-[60px] mr-2 ml-1">restaurant</span>
+                <h1 class="text-4xl sm:text-[2.55rem] lg:text-5xl uppercase font-poppins">Barg-E-Kebab</h1>
+            </div>
+
+            <!-- Right side: Large Navigation Bar (visible on medium screens and up) -->
+            <div id="large-navbar" class="hidden md:flex w-fit">
+                <ul
+                    class="w-full uppercase text-poppins font-semibold flex justify-center items-center pr-5 text-[1.15rem] lg:text-[1.3rem] xl:text-[1.4rem]">
+                    <!-- Menu items with hover effects -->
+                    <li class="text-center pr-3 pl-3 border-r-2 border-rose-950 border-opacity-70">
+                        <a href="#home-page" class="hover:text-xl lg:hover:text-[1.5rem]">Home</a>
+                    </li>
+                    <li class="text-center pr-3 pl-3 border-r-2 border-rose-950 border-opacity-70">
+                        <a href="#menu-pg" class="hover:text-xl lg:hover:text-[1.5rem]">Menu</a>
+                    </li>
+                    <li class="text-center pr-3 pl-3 border-r-2 border-rose-950 border-opacity-70">
+                        <a href="#contact" class="hover:text-xl lg:hover:text-[1.5rem]">Contact</a>
+                    </li>
+                    <li class="text-center pl</li>-3">
+                        <a href="#about-menu" class="hover:text-xl lg:hover:text-[1.5rem]">About</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Dropdown icon for smaller screens (menu button) -->
+            <div id="dropdown-icon" class="md:hidden flex items-center justify-center">
+                <button>
+                    <span id="dropdown-btn" class="material-symbols-outlined text-[50px] sm:text-[55px]">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Dropdown Menu for smaller screens (hidden by default) -->
+        <div id="dropdown-navbar"
+            class="hidden text-white bg-[#1F4529] bg-opacity-[98%]  z-10 transition-opacity duration-300 flex flex-col items-center md:hidden">
+            <!-- Menu items for small screens, similar to large navbar -->
+            <ul
+                class="w-full font-poppins uppercase flex flex-col justify-center items-center text-xl gap-4 sm:</ul>gap-6">
+                <li class="text-center pt-2 sm:pt-4 pb-2 border-b-2 border-rose-950 border-opacity-70">
+                    <a href="#home-page" class="hover:text-2xl">Home</a>
+                </li>
+                <li class="text-center pb-2 border-b-2 border-rose-950 border-opacity-70">
+                    <a href="#menu-pg" class="hover:text-2xl sm:hover:text-2xl">Menu</a>
+                </li>
+                <li class="text-center pb-2 border-b-2 border-rose-950 border-opacity-70">
+                    <a href="#contact" class="hover:text-2xl sm:hover:text-2xl">Contact</a>
+                </li>
+                <li class="text-center pb-3">
+                    <a href="#about-txt" class="hover:text-2xl sm:hover:text-2xl">About</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Home-Main-Page -->
+
+    <main id="home-page" class="bg-[url('../images/md-bg.jpg')] bg-cover bg-center h-screen
+    pt-20 w-screen flex items-center ">
+        <div id="sub-title"
+            class="visible p-4  overflow-hidden  font-poppins w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%]  flex  flex-wrap gap-2">
+            <div class=" bg-white h-fit p-4 z-100 bg-opacity-60 flex  flex-wrap ">
+                <h1 class="font-bold text-5xl md:text-6xl p-3">Enjoy Our <br> Delicious Meal</h1>
+                <p class="font-whispers font-semibold lg:text-lg">"Welcome to <span>Barg-E-Kebab</span>, where every
+                    bite is a delight! Experience fresh ingredients,
+                    mouthwatering flavors, and warm hospitality. Dine with us and savor the taste of perfection!"</p>
+            </div>
+            <div>
+                <button type="button"
+                    class="text-white w-fit h-fit  font-poppins  bg-[#050708] hover:bg-[#1a1c1e] hover:text-gray-200 transition-all duration-300 ease-in-out focus:ring-4 focus:ring-[#050708]/50 focus:ring-offset-2 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 m-5 inline-flex items-center justify-center hover:scale-105 shadow-lg hover:shadow-xl">
+                    <a href="#" class="uppercase">Book a table</a>
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <!-- Menu Page -->
+
+    <div id="menu-pg" class=" pt-20 z-0 mx-auto p-6 bg-[#dad7cd] bg-opacity-[90%] text-black  w-[100vw] h-fit">
+        <h1 class="text-3xl uppercase font-bold text-center mb-8">Our Menu</h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 text-white md:grid-cols-3 gap-6">
+
+            <!-- Kebab -->
+            <div class="bg-white  dark:bg-gray-800 rounded-lg shadow-lg p-4 transition transform hover:scale-105">
+                <img src="https://images.pexels.com/photos/7439806/pexels-photo-7439806.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="Kebab" class="w-full h-40 object-cover rounded-md">
+                <h2 class="text-xl font-semibold mt-4 uppercase">Kebab</h2>
+                <p class="text-gray-600 dark:text-gray-300">Tender, juicy grilled meat served with rice or bread.</p>
+                <button class="mt-3 bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg">Order Now</button>
+            </div>
+
+            <!-- Fesenjan -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 transition transform hover:scale-105">
+                <img src="https://i.pinimg.com/736x/35/6d/92/356d921d0d5b030b768b1f3d91858c49.jpg" alt="Fesenjan"
+                    class="w-full h-40 object-cover rounded-md">
+                <h2 class="text-xl font-semibold mt-4 uppercase">Fesenjan</h2>
+                <p class="text-gray-600 dark:text-gray-300">A rich, tangy stew with chicken or duck, pomegranate, and
+                    walnuts.</p>
+                <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-lg">Order
+                    Now</button>
+            </div>
+
+            <!-- Ghormeh Sabzi -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 transition transform hover:scale-105">
+                <img src="https://littlespicejar.com/wp-content/uploads/2023/02/Ghormeh-Sabzi-4-1024x1536.jpg"
+                    alt="Ghormeh Sabzi" class="w-full h-40 object-cover rounded-md">
+                <h2 class="text-xl font-semibold mt-4 uppercase">Ghormeh Sabzi</h2>
+                <p class="text-gray-600 dark:text-gray-300">A flavorful stew with herbs, beans, and lamb.</p>
+                <button class="mt-3 bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg">Order Now</button>
+            </div>
+
+            <!-- Khoresht-e Bademjan -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 transition transform hover:scale-105">
+                <img src="https://assets.bonappetit.com/photos/5f773a4e91fb6059916f3260/1:1/w_1920,c_limit/HLY_Khoresh_16x9.jpg"
+                    alt="Khoresht-e Bademjan" class="w-full h-40 object-cover rounded-md">
+                <h2 class="text-xl font-semibold mt-4 uppercase">Khoresht-e Bademjan</h2>
+                <p class="text-gray-600 dark:text-gray-300">Eggplant stew with lamb and tomato, a classic Iranian
+                    comfort food.</p>
+                <button class="mt-3 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg">Order Now</button>
+            </div>
+
+            <!-- Tahchin -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 transition transform hover:scale-105">
+                <img src="https://img.delicious.com.au/JH3e6kqN/w759-h506-cfill/del/2022/05/rice-chickentanchin-hero-digi-0138-168610-1.png"
+                    alt="Tahchin" class="w-full h-40 object-cover rounded-md">
+                <h2 class="text-xl font-semibold mt-4 uppercase">Tahchin</h2>
+                <p class="text-gray-600 dark:text-gray-300">A savory rice dish with yogurt, saffron, and chicken, baked
+                    to perfection.</p>
+                <button class="mt-3 bg-purple-500 hover:bg-purple-600 text-white py-2 px-4 rounded-lg">Order
+                    Now</button>
+            </div>
+
+            <!-- Shirin Polow -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 transition transform hover:scale-105">
+                <img src="https://www.carolinescooking.com/wp-content/uploads/2020/03/Persian-sweet-rice-shirin-polow-photo.jpg"
+                    alt="Shirin Polow" class="w-full h-40 object-cover rounded-md">
+                <h2 class="text-xl font-semibold mt-4 uppercase">Shirin Polow</h2>
+                <p class="text-gray-600 dark:text-gray-300">A sweet rice dish with orange zest, saffron, and pistachios.
+                </p>
+                <button class="mt-3 bg-teal-500 hover:bg-teal-600 text-white py-2 px-4 rounded-lg">Order Now</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="about-menu" class="w-screen pt-16 h-auto bg-[#dce1de]">
+        <h1 id="about-txt" class="uppercase font-poppins font-bold text-4xl p-5">About</h1>
+        <div id="about-cont" class=" text-black w-fit h-fit p-5 flex flex-wrap md:flex-nowrap gap-5">
+
+            <img src="https://images.pexels.com/photos/1449773/pexels-photo-1449773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="Restaurant-img"
+                class="h-[300px] w-[400px] rounded-lg shadow-lg cursor-pointer transition-transform duration-300 hover:scale-105 active:scale-95">
+
+
+            <section>
+                <p class="font-poppins  text-lg lg:text-xl xl:text-2xl ">Welcome to
+                    <strong>Barg-E-Kebab</strong>, where we bring the authentic flavors of Iranian cuisine to
+                    your table. Our
+                    menu is crafted with passion, featuring a selection of traditional <strong>Iranian feasts</strong>
+                    made from the
+                    finest ingredients and rich Persian spices.
+
+                    At Barg-E-Kebab, we believe in offering not just food, but an experience — one that captures the
+                    warmth, hospitality, and centuries-old culinary traditions of Iran. Whether you're craving succulent
+                    kebabs, aromatic koorma, or perfectly spiced shawarma, every dish is prepared with care
+                    to deliver an unforgettable taste.
+
+                    Join us for a true Persian dining experience and indulge in the essence of Iran, right here at
+                    Barg-E-Kebab.
+                </p>
+            </section>
+
+
+        </div>
+
+    </div>
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="bg-[#1B1F3B] text-white py-8 px-6">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-6">
+
+            <!-- Contact Info -->
+            <div class="w-full md:w-1/3 text-center md:text-left">
+                <h2 class="text-2xl font-semibold uppercase mb-2">Contact Us</h2>
+                <p class="text-gray-300">📍 123 Persian Street, Tehran</p>
+                <p class="text-gray-300">📞 +123 456 7890</p>
+                <p class="text-gray-300">✉ contact@barg-e-kebab.com</p>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="w-full md:w-1/3 text-center">
+                <h2 class="text-2xl font-semibold uppercase mb-2">Follow Us</h2>
+                <div class="flex justify-center gap-6 mt-3">
+                    <a href="#" class="text-white text-3xl hover:text-blue-500 transition"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white text-3xl hover:text-pink-500 transition"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white text-3xl hover:text-gray-400 transition"><i
+                            class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="text-white text-3xl hover:text-red-500 transition"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Newsletter Subscription -->
+            <div class="w-full md:w-1/3 text-center md:text-left">
+                <h2 class="text-2xl font-semibold uppercase mb-2">Subscribe</h2>
+                <form class="flex flex-col md:flex-row items-center md:items-end">
+                    <input type="email" placeholder="Enter your email"
+                        class="px-3 py-2 rounded-lg text-black focus:ring-2 focus:ring-[#FFD700]">
+                    <button type="submit"
+                        class="mt-2 md:mt-0 md:ml-2 bg-[#FFD700] hover:bg-yellow-600 text-black px-4 py-2 rounded-lg">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center text-gray-400 mt-6 border-t border-gray-500 pt-4">
+            <p>&copy; 2025 Barg-E-Kebab. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
