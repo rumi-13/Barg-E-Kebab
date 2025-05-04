@@ -15,7 +15,7 @@ A **static, responsive landing page** for a restaurant named **Barg-e-Kebab**, b
 ## 🛠️ Technologies Used  
 - **HTML** - Structure  
 - **Tailwind CSS** - Styling  
-- **JavaScript** - Interactivity  
+- **JavaScript** - Interactivity   
 
 ## 🔧 Installation  
 1. Clone the repository:  
